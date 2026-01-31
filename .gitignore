@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables (keep your Formspree ID private)
+.env
+
+# Vite
+.vite/
+
+# IDE / OS
+.DS_Store
+*.log
+.env.local
+.env.*.local
