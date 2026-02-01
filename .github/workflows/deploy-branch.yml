@@ -24,6 +24,7 @@ jobs:
           npm run build
         env:
           VITE_FORMSPREE_ID: ${{ secrets.VITE_FORMSPREE_ID || 'mojwbeye' }}
+          VITE_OPENAI_API_KEY: ${{ secrets.VITE_OPENAI_API_KEY }}
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4

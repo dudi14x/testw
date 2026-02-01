@@ -1,0 +1,64 @@
+# Muayad AlAbduwani - Portfolio Knowledge Base
+
+## About Muayad AlAbduwani
+Muayad AlAbduwani is an AI & Machine Learning Enthusiast. His motto is "Building intelligent systems and transforming data into value."
+
+## Contact Information
+- Email: muayadabduwani@gmail.com
+- Website: muayadabduwani.com
+- To get in touch, use the contact form on the website or email directly.
+
+## Skills & Technologies
+
+### Technical Skills
+Python, Java, JavaScript, TypeScript, React, SQL, Power BI
+
+### AI & Data
+Machine Learning, Data Analytics, Model Evaluation, Data Visualization, Dashboard Development
+
+### Tools & Platforms
+Git & GitHub, VS Code, Postman, Figma, Jupyter Notebook
+
+## Experience & Education
+
+### Current Roles (2025)
+- Software Engineer at Zain Omantel International - Developing software solutions and platform features
+- GRC Unit at Oman Data Park - Supporting Governance, Risk & Compliance operations and automation
+- AI Developer at ORKI AI - Building AI-driven solutions and machine learning models
+- Center of Excellence Unit at Oman Data Park - Working on innovation initiatives and advanced analytics
+- Digital Content Creator - Awarded ICONS OMAN, creating digital content and creative media
+
+### Previous Experience
+- Big Data & Analytics + Consumer Unit at Omantel (2024) - Data analytics, Power BI dashboards, data monetization
+
+### Education
+- BSc Computer Science (AI Pathway) at Cardiff Metropolitan University (2023-2026)
+- IB Diploma Student at International Baccalaureate (2021-2023)
+- IGCSE Student (2019-2021)
+
+### Certifications
+- IELTS Certificate - Overall Band 7.5, Academic English proficiency (2023)
+- Fine Dining Certificate - Cooking Academia Sarajevo, professional culinary training (2024)
+
+## Frequently Asked Questions
+
+Q: How can I contact Muayad?
+A: You can reach Muayad by email at muayadabduwani@gmail.com or through the contact form on the website.
+
+Q: What does Muayad do?
+A: Muayad is an AI & Machine Learning enthusiast. He works as a Software Engineer, AI Developer, and in GRC (Governance, Risk & Compliance). He focuses on building intelligent systems and transforming data into value.
+
+Q: What are Muayad's skills?
+A: Muayad's technical skills include Python, Java, JavaScript, TypeScript, React, SQL, and Power BI. In AI & Data he works with Machine Learning, Data Analytics, Model Evaluation, Data Visualization, and Dashboard Development. He uses tools like Git, VS Code, Postman, Figma, and Jupyter Notebook.
+
+Q: Where does Muayad work?
+A: Muayad currently works at Zain Omantel International (Software Engineer), Oman Data Park (GRC Unit, Center of Excellence), and ORKI AI (AI Developer). He previously worked at Omantel.
+
+Q: Where is Muayad studying?
+A: Muayad is studying BSc Computer Science with an AI Pathway at Cardiff Metropolitan University (2023-2026).
+
+Q: Can I download Muayad's CV?
+A: Yes, there is a Download CV button on the website navbar that provides Muayad's resume.
+
+Q: What is this website about?
+A: This is Muayad AlAbduwani's personal portfolio showcasing his experience, skills, education, and contact information. It demonstrates his work in AI, Machine Learning, and software development.

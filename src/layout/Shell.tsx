@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import ParticleBackground from "../components/ParticleBackground";
 import StarField from "../components/StarField";
+import OpenAIChat from "../components/OpenAIChat";
 
 export default function Shell() {
   return (
@@ -9,6 +10,7 @@ export default function Shell() {
       <ParticleBackground />
       <StarField />
       <Navbar />
+      <OpenAIChat />
       <main className="relative z-10 pt-14 sm:pt-16" role="main">
         <Outlet />
       </main>
