@@ -125,9 +125,9 @@ export default function Experience() {
         Experience & Education
       </h2>
 
-      {/* Center Glow Line */}
+      {/* Center Glow Line - hidden on mobile/iOS */}
       <div
-        className="absolute left-1/2 top-40 bottom-0 w-[2px] bg-gradient-to-b from-cyan-500/80 via-cyan-500/30 to-transparent -translate-x-1/2"
+        className="hidden md:block absolute left-1/2 top-40 bottom-0 w-[2px] bg-gradient-to-b from-cyan-500/80 via-cyan-500/30 to-transparent -translate-x-1/2"
         aria-hidden="true"
       />
 
@@ -156,13 +156,13 @@ function TimelineCard({
 
   return (
     <div
-      className={`relative flex items-center justify-center pl-8 pr-8 md:pl-0 md:pr-0 ${
+      className={`relative flex items-center justify-center px-4 md:px-0 md:pl-0 md:pr-0 ${
         isLeft ? "md:justify-start md:pr-12" : "md:justify-end md:pl-12"
       }`}
     >
-      {/* Dot */}
+      {/* Dot - hidden on mobile/iOS */}
       <div
-        className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.9)] z-10 shrink-0"
+        className="hidden md:block absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.9)] z-10 shrink-0"
         aria-hidden="true"
       />
 
