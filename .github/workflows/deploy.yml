@@ -33,8 +33,6 @@ jobs:
         run: npm run build
         env:
           VITE_FORMSPREE_ID: ${{ secrets.VITE_FORMSPREE_ID || 'mojwbeye' }}
-          VITE_TAWK_PROPERTY_ID: ${{ secrets.VITE_TAWK_PROPERTY_ID }}
-          VITE_TAWK_WIDGET_ID: ${{ secrets.VITE_TAWK_WIDGET_ID }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

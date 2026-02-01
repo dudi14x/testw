@@ -548,27 +548,3 @@ html {
   }
 }
 
-/* Tawk.to chat widget - smaller on all devices, extra small on mobile */
-#tawk-bubble-container,
-#tawkchat-container,
-iframe[title="chat widget"],
-div[id^="tawk-"] {
-  transform: scale(0.8) !important;
-  transform-origin: bottom right !important;
-}
-@media (max-width: 1024px) {
-  #tawk-bubble-container,
-  #tawkchat-container,
-  iframe[title="chat widget"],
-  div[id^="tawk-"] {
-    transform: scale(0.65) !important;
-  }
-}
-@media (max-width: 640px) {
-  #tawk-bubble-container,
-  #tawkchat-container,
-  iframe[title="chat widget"],
-  div[id^="tawk-"] {
-    transform: scale(0.55) !important;
-  }
-}
