@@ -1,3 +1,4 @@
+import { useState, useCallback } from "react";
 import { useTheme } from "../context/ThemeContext";
 
 type NavLink = {
@@ -16,8 +17,9 @@ const CV_URL = "/mmmj.pdf";
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-  const scrollTo = (id: string): void => {
+  const scrollTo = useCallback((id: string): void => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({
@@ -25,28 +27,30 @@ export default function Navbar() {
         block: "start",
       });
     }
-  };
+    setMobileOpen(false);
+  }, []);
 
   const linkClassName =
     "nav-link text-sm hover:text-cyan-400 transition-colors px-4 py-2 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black rounded";
 
   return (
     <nav
-      className="nav-bar fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-md"
+      className="nav-bar fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-md safe-area-top"
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           <button
             onClick={() => scrollTo("home")}
-            className="text-cyan-400 font-semibold text-lg tracking-tight hover:text-cyan-300 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black rounded"
+            className="text-cyan-400 font-semibold text-lg tracking-tight hover:text-cyan-300 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black rounded shrink-0"
             aria-label="Go to home"
           >
             Muayad
           </button>
 
-          <div className="flex items-center gap-2" role="list">
+          {/* Desktop nav - hidden on mobile */}
+          <div className="hidden md:flex items-center gap-2" role="list">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -57,7 +61,6 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
-
             <a
               href={CV_URL}
               download="Muayad_AlAbduwani_CV.pdf"
@@ -68,7 +71,6 @@ export default function Navbar() {
             >
               Download CV
             </a>
-
             <button
               onClick={toggleTheme}
               className="p-2 rounded-lg hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black"
@@ -81,8 +83,76 @@ export default function Navbar() {
               )}
             </button>
           </div>
+
+          {/* Mobile: hamburger + theme toggle */}
+          <div className="flex md:hidden items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black"
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+            >
+              {theme === "dark" ? (
+                <span className="text-lg" aria-hidden="true">☀️</span>
+              ) : (
+                <span className="text-lg" aria-hidden="true">🌙</span>
+              )}
+            </button>
+            <button
+              onClick={() => setMobileOpen((o) => !o)}
+              className="p-2 rounded-lg hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-black"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+            >
+              <span className="sr-only">{mobileOpen ? "Close" : "Menu"}</span>
+              <svg
+                className="w-6 h-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                {mobileOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Mobile dropdown menu */}
+      {mobileOpen && (
+        <div
+          className="md:hidden border-t border-white/10 bg-black/95 backdrop-blur-md safe-area-bottom"
+          role="menu"
+        >
+          <div className="px-4 py-4 space-y-1">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollTo(link.id)}
+                className={`block w-full text-left ${linkClassName} rounded-lg`}
+                role="menuitem"
+              >
+                {link.label}
+              </button>
+            ))}
+            <a
+              href={CV_URL}
+              download="Muayad_AlAbduwani_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block nav-link px-4 py-3 text-sm font-medium rounded-lg border border-cyan-400/50 hover:bg-cyan-500/20 hover:border-cyan-400 transition-colors"
+              aria-label="Download CV"
+              role="menuitem"
+            >
+              Download CV
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

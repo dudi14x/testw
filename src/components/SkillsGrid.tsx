@@ -51,11 +51,11 @@ export default function SkillsGrid() {
       className="relative py-16 overflow-hidden"
       aria-label="Skills and technologies section"
     >
-      <h2 className="text-4xl font-bold text-center mb-12 text-white">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white px-4">
         Skills & Technologies
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto px-4 sm:px-6">
         {skillCategories.map((category) => (
           <SkillCard
             key={category.title}

@@ -91,7 +91,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col items-center justify-center px-6 py-16"
+      className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-16"
       aria-label="Contact section"
     >
       <div className="max-w-2xl w-full mx-auto">

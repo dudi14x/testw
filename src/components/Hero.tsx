@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen w-full flex flex-col justify-center items-center text-center px-6 relative overflow-hidden"
+      className="min-h-screen w-full flex flex-col justify-center items-center text-center px-4 sm:px-6 relative overflow-hidden"
       aria-label="Hero section"
     >
       <div className="hero-content animate-fade-in-up">

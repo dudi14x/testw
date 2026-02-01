@@ -121,7 +121,7 @@ export default function Experience() {
       className="relative py-16"
       aria-label="Experience and education section"
     >
-      <h2 className="text-4xl font-bold text-center mb-12 text-white">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-white px-4">
         Experience & Education
       </h2>
 
@@ -131,7 +131,7 @@ export default function Experience() {
         aria-hidden="true"
       />
 
-      <div className="max-w-6xl mx-auto space-y-12 relative px-6">
+      <div className="max-w-6xl mx-auto space-y-12 relative px-4 sm:px-6">
         {experiences.map((item, index) => (
           <TimelineCard key={`${item.year}-${item.title}-${index}`} {...item} />
         ))}
@@ -156,19 +156,19 @@ function TimelineCard({
 
   return (
     <div
-      className={`relative flex items-center ${
-        isLeft ? "justify-start pr-12 md:pr-0" : "justify-end pl-12 md:pl-0"
+      className={`relative flex items-center justify-center pl-8 pr-8 md:pl-0 md:pr-0 ${
+        isLeft ? "md:justify-start md:pr-12" : "md:justify-end md:pl-12"
       }`}
     >
       {/* Dot */}
       <div
-        className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.9)] z-10"
+        className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.9)] z-10 shrink-0"
         aria-hidden="true"
       />
 
-      {/* Card */}
+      {/* Card - centered on mobile, alternating on desktop */}
       <article
-        className="w-full max-w-[380px] rounded-2xl p-6 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/15 shadow-[0_25px_80px_rgba(0,0,0,0.6)] hover:shadow-[0_35px_120px_rgba(34,211,238,0.35)] hover:-translate-y-2 transition-all duration-500"
+        className="w-full max-w-[380px] mx-auto md:mx-0 rounded-2xl p-5 sm:p-6 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/15 shadow-[0_25px_80px_rgba(0,0,0,0.6)] hover:shadow-[0_35px_120px_rgba(34,211,238,0.35)] hover:-translate-y-2 transition-all duration-500"
       >
         <time className="text-sm text-cyan-400 font-medium" dateTime={year}>
           {year}
