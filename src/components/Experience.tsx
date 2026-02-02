@@ -50,7 +50,7 @@ const experiences: ExperienceItem[] = [
   },
   {
     year: "2025",
-    side: "left",
+    side: "right",
     title: "AI Developer",
     org: "ORKI AI",
     desc: "Building AI-driven solutions and machine learning models.",
@@ -169,7 +169,7 @@ function TimelineCard({
   return (
     <div
       className={`relative flex items-center justify-center px-4 lg:px-0 lg:pl-0 lg:pr-0 ${
-        isLeft ? "lg:justify-start lg:pr-12" : "lg:justify-end lg:pl-12"
+        isLeft ? "lg:justify-start lg:pr-16" : "lg:justify-end lg:pl-16"
       }`}
     >
       {/* Dot - hidden on mobile/tablet (screens under 1024px) */}
