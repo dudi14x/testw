@@ -11,7 +11,7 @@ export default function Shell() {
       <StarField />
       <Navbar />
       <OpenAIChat />
-      <main className="relative z-10 pt-14 sm:pt-16" role="main">
+      <main className="relative z-10 pt-14 sm:pt-16 min-h-screen" role="main">
         <Outlet />
       </main>
     </div>

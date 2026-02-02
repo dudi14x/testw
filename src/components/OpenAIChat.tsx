@@ -112,7 +112,8 @@ export default function OpenAIChat() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-[9999] w-14 h-14 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
+        className="fixed bottom-6 right-6 z-[9999] w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center safe-area-bottom safe-area-right"
+        style={{ bottom: "max(1.5rem, env(safe-area-inset-bottom))", right: "max(1.5rem, env(safe-area-inset-right))" }}
         aria-label="Open chat"
       >
         <svg
@@ -134,7 +135,10 @@ export default function OpenAIChat() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-[9999] w-[380px] h-[600px] max-w-[calc(100vw-2rem)] max-h-[calc(100vh-2rem)] bg-gray-900 rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-800">
+    <div
+      className="fixed bottom-6 right-6 z-[9999] w-[calc(100vw-2rem)] sm:w-[360px] md:w-[380px] h-[70vh] sm:h-[550px] md:h-[600px] max-w-[380px] max-h-[calc(100vh-4rem)] bg-gray-900 rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-800"
+      style={{ bottom: "max(1.5rem, env(safe-area-inset-bottom))", right: "max(1.5rem, env(safe-area-inset-right))" }}
+    >
       {/* Header */}
       <div className="bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">

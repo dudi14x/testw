@@ -193,6 +193,14 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* iOS/tablet - improve touch scroll and prevent zoom on input focus */
+@media (hover: none) and (pointer: coarse) {
+  input, textarea, select {
+    font-size: 16px; /* prevents iOS zoom on focus */
+  }
 }
 
 @keyframes float {

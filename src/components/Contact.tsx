@@ -91,7 +91,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 py-16"
+      className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16"
       aria-label="Contact section"
     >
       <div className="max-w-2xl w-full mx-auto">
@@ -105,7 +105,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="rounded-2xl p-8 md:p-10 bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_25px_80px_rgba(0,0,0,0.6)]">
+        <div className="rounded-2xl p-6 sm:p-8 md:p-10 bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_25px_80px_rgba(0,0,0,0.6)]">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label

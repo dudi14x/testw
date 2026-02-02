@@ -22,8 +22,19 @@ type ExperienceItem = {
 
 const experiences: ExperienceItem[] = [
   {
-    year: "2025",
+    year: "2025 - 2026",
     side: "left",
+    title: "Head of Sports Committee",
+    org: "Omani Students Society in Cardiff (OSSC)",
+    desc: "Leadership, Team Building, Networking, Physical Health.",
+    links: [
+      { type: "instagram", url: "https://www.instagram.com/oss_cardiff/?hl=en" },
+      { type: "linkedin", url: "https://www.linkedin.com/company/osscardiff/" }
+    ]
+  },
+  {
+    year: "2025",
+    side: "right",
     title: "Software Engineer",
     org: "Zain Omantel International",
     desc: "Developing software solutions and platform features.",
@@ -31,7 +42,7 @@ const experiences: ExperienceItem[] = [
   },
   {
     year: "2025",
-    side: "right",
+    side: "left",
     title: "GRC Unit",
     org: "Oman Data Park",
     desc: "Supporting Governance, Risk & Compliance operations and automation.",
@@ -132,7 +143,7 @@ export default function Experience() {
         aria-hidden="true"
       />
 
-      <div className="max-w-6xl mx-auto space-y-12 relative px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto space-y-8 sm:space-y-10 lg:space-y-12 relative px-4 sm:px-6 md:px-8">
         {experiences.map((item, index) => (
           <TimelineCard key={`${item.year}-${item.title}-${index}`} {...item} />
         ))}
@@ -169,7 +180,7 @@ function TimelineCard({
 
       {/* Card - centered on mobile, alternating on desktop */}
       <article
-        className="w-full max-w-[380px] mx-auto lg:mx-0 rounded-2xl p-5 sm:p-6 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/15 shadow-[0_25px_80px_rgba(0,0,0,0.6)] hover:shadow-[0_35px_120px_rgba(34,211,238,0.35)] hover:-translate-y-2 transition-all duration-500"
+        className="w-full max-w-[340px] sm:max-w-[360px] md:max-w-[380px] mx-auto lg:mx-0 rounded-2xl p-4 sm:p-5 md:p-6 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/15 shadow-[0_25px_80px_rgba(0,0,0,0.6)] hover:shadow-[0_35px_120px_rgba(34,211,238,0.35)] hover:-translate-y-2 transition-all duration-500"
       >
         <time className="text-sm text-cyan-400 font-medium" dateTime={year}>
           {year}
