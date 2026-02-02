@@ -548,3 +548,17 @@ html {
   }
 }
 
+/* Company marquee - flying effect A-Z */
+.animate-marquee {
+  width: max-content;
+  will-change: transform;
+}
+
+[data-theme="light"] .animate-marquee span:first-of-type {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .animate-marquee span:first-of-type:hover {
+  color: #0284c7 !important;
+}
+
