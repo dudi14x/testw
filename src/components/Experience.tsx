@@ -145,7 +145,11 @@ export default function Experience() {
 
       <div className="max-w-6xl mx-auto space-y-8 sm:space-y-10 lg:space-y-12 relative px-4 sm:px-6 md:px-8">
         {experiences.map((item, index) => (
-          <TimelineCard key={`${item.year}-${item.title}-${index}`} {...item} />
+          <TimelineCard
+            key={`${item.year}-${item.title}-${index}`}
+            {...item}
+            side={index % 2 === 0 ? "left" : "right"}
+          />
         ))}
       </div>
     </section>
